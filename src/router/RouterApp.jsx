@@ -4,6 +4,7 @@ import { NotFound } from "../views/NotFound"
 import { Login } from "../views/Login"
 import { RouteProtected } from "../components/RouteProtected"
 import { Register } from "../views/Register"
+import { Acerca } from "../views/Acerca"
 
 const RouterApp = () => {
   return (
@@ -13,6 +14,7 @@ const RouterApp = () => {
         <Route path="/login" element={<Login />} />
          <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/acerca" element={<Acerca />} />
       </Routes>
     </BrowserRouter>
   )

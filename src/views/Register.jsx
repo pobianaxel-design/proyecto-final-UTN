@@ -48,20 +48,26 @@ const  [nombre, setNombre] = useState("")
       <h2 className="title-login">Crear usuario</h2>
       <form onSubmit={handleSubmit}>
        <input
+        minLength={3}
+       required
           type="text"
           placeholder="Tu nombre"
           onChange={handleChangeNombre}
-        />
+        />{nombre.length < 3 && <p className="error-form">Minimo 3 caracteres</p>}
         <input
+         required
           type="email"
           placeholder="Correo electrónico"
           onChange={handleChangeEmail}
-        />
+        />{!email.includes('@') && <p className="error-form">Mail no valido</p>}
         <input
+        minLength={6}
+         required
           type="password"
           placeholder="Contraseña"
           onChange={handleChangePassword}
-        />
+        />{password.length < 6 && <p className="error-form">Contraseña debil (minimo 6)</p>}
+        
         <button>Registrarse</button>
         {
           error && <p className="error-form">Error al registrarse</p>
