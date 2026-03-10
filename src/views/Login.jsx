@@ -18,7 +18,9 @@ const Login = () => {
   const handleChangePassword = (e) => {
     setPassword(e.target.value)
   }
-
+ const handlepage = (e) => {
+  navigate("/register")
+ }
   const handleSubmit = (e) => {
     e.preventDefault()
     setError(null)
@@ -52,6 +54,9 @@ const Login = () => {
           error && <p className="error-form">Error al ingresar</p>
         }
       </form>
+
+      <button onClick={handlepage}>registrarse</button>
+      
     </section>
   )
 }
