@@ -35,13 +35,13 @@ aside h1 {
   width: 100%;
   display: block;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #75b67d;
 }
 
 .not-found-text {
   font-size: 14px;
   text-align: center;
-  color: gray;
+  color: rgb(72, 116, 72);
 }
 
 ul {
@@ -52,14 +52,14 @@ li {
   margin-bottom: 10px;
   display: flex;
   border-radius: 4px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #abe0aa;
   padding: 10px;
   cursor: pointer;
   gap: 10px;
 }
 
 li:hover {
-  background-color: #e6e6e6;
+  background-color: #11b34f;
 }
 
 li img {
@@ -69,7 +69,7 @@ li img {
 
 li small {
   display: block;
-  color: gray;
+  color: rgb(5, 39, 2);
 }
 
 /* chat styles */
@@ -86,13 +86,13 @@ li small {
 }
 
 .chat-cont-empty p {
-  color: gray;
+  color: rgb(117, 219, 117);
 }
 
 .chat header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 5px solid #32f34b;
   padding: 15px;
-  background-color: #fafafa;
+  background-color: #69ac66;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,9 +101,9 @@ li small {
 .chat header button {
   padding: 8px 15px;
   border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: gray;
-  color: white;
+  border: 1px solid #862320;
+  background-color: rgb(209, 88, 88);
+  color: rgb(2, 0, 5);
   cursor: pointer;
   transition: all .2s;
 }
@@ -122,9 +122,9 @@ li small {
   max-width: 400px;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.192);
+  box-shadow: 0px 0px 4px rgba(12, 77, 6, 0.192);
   word-wrap: break-word;
-  background-color: #e4e6eb;
+  background-color: #f6f8f7;
 }
 
 .message .timestamp {
@@ -156,18 +156,18 @@ li small {
   flex: 1;
   padding: 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #acf5bc;
 }
 
 .chat-input input:focus {
-  outline: 1px solid #9c9c9c;
+  outline: 1px solid #699763;
 }
 
 .chat-input button {
   padding: 8px 15px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  background-color: gray;
+  background-color: rgb(111, 165, 104);
   color: white;
   cursor: pointer;
   transition: all .2s;
@@ -205,58 +205,252 @@ li small {
 
 /* Login styles */
 
-section form {
-  max-width: 360px;
-  margin: 30px auto;
+/* Contenedor principal para centrar todo en la pantalla */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Color de fondo suave */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* La tarjeta blanca del login */
+.login-box {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-title {
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.login-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Formulario e inputs */
+.login-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  background-color: #ffffff;
-  padding: 24px;
-  border-radius: 6px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  gap: 1.2rem;
 }
 
-section .title-login {
-  text-align: center;
-  margin-top: 60px;
-  font-weight: 500;
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
 }
 
-section form input {
+.login-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 5px;
+}
+
+/* Errores y Footer */
+.error-message {
+  color: #d9534f;
+  background: #fdf2f2;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.login-footer {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.login-footer p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #999;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  color: #666;
+}
+
+
+/* About Page Styles */
+.about-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #b0f1aa;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.about-subtitle {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #444;
+}
+
+.about-text {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: rgb(70, 105, 70);
+  color: rgb(171, 240, 180);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.about-link:hover {
+  background-color: #013812;
+  color: #95db7f;
+}
+
+
+
+
+
+
+
+/* Register Page - estilo WhatsApp */
+.register-page {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #e5ddd5; /* fondo suave tipo chat */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #075E54; /* verde WhatsApp */
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-input {
+  padding: 12px;
+  border-radius: 25px;
   border: 1px solid #ccc;
   font-size: 14px;
+  transition: all 0.2s;
 }
 
-section form input:focus {
-  outline: 1px solid #9c9c9c;
+.register-input:focus {
+  outline: none;
+  border-color: #128C7E; /* verde destacado */
+  box-shadow: 0 0 5px rgba(18,140,126,0.4);
 }
 
-section form button {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: gray;
+.register-button,
+.login-button {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background-color: #25D366; /* verde WhatsApp */
   color: white;
   cursor: pointer;
-  transition: all .2s;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 16px;
 }
 
-section form button:hover {
-  background-color: white;
-  color: #888888;
+.register-button:hover,
+.login-button:hover {
+  background-color: #128C7E;
 }
 
 .error-form {
-  text-align: center;
-  color: rgb(216, 26, 26);
-  font-size: 15px;
+  color: #C62828; /* rojo fuerte para errores */
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 880px) {
-  aside {
-    display: none;
-  }
+.about-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #075E54;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.about-link:hover {
+  color: #25D366;
 }
